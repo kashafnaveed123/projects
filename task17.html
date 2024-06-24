@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 17</title>
+</head>
+<body>
+    <script>
+        // Question no.1 
+        // let num=prompt("Write a positive number here.")
+        // let array=[1,2,3,4,5,6,7,8,9,0];
+        //     if(array.indexOf(num)!== -1){
+        //         //!== -1 kiu likhna hai 
+        //         console.log(`${num} is in the array`)
+        //     }
+        //     else{
+        //         console.log(`${num} is not in the array`);
+        //     }
+
+        // Quesion no. 2
+        // //way one
+        // let array1=[11,22,33,44,55,66];
+        // if(array1[0]<20 || array1[5]>20){
+        // array1.shift();array1.unshift(100);
+        // array1.pop();array1.push(100)
+        // console.log(array1)
+        // }
+        // else{
+        //     console.log(array1)
+        // }
+
+        // //way two
+        // let array2=[11,22,33,44,55,66];
+        // array2.shift();array2.unshift(100);
+        // array2.pop();array2.push(100)
+        // console.log(array2)
+
+        //Question no. 3
+        
+        // //if array is even
+        // let array3=[11,22,33,44,55,66]
+        // let mid=array3.length/2;
+        // console.log(array3[mid-1])
+
+        // //if array is odd
+        // let array4=[11,22,33,44,55,66,77]
+        // let mid1=array4.length/2;
+        // let num1=array4[mid1]
+        // if(num1==undefined){
+        //     console.log("Your given array has odd no. of values")
+        // }
+        // else{
+        //     console.log("no result found")
+        // }
+
+        //question no. 4
+        // let array5=[11,22,33,44,55]
+        // array6=[66,77,88,99,100]
+        // console.log(array5.concat(array6))
+        
+        // question 5:
+        let start=prompt("Write starting num here")
+        let start1 = parseInt(start);
+        let end=prompt("Write ending num here")
+        let array=[];
+        // console.log(array)
+        let createArray=(start1,end)=>{
+            for(let i=start1 ; i<=end;i++ ){
+              array.push(i)
+            }
+            console.log('data show ====>', array) ;
+        }
+        let result = createArray(start1, end);
+        console.log(result);
+
+        //Question no. 6:
+    //     let line=[11,22,33,44,55];
+    //     line.sort((a, b) => b - a);
+    //     let threeLargestNum=line.slice(0,3);
+    //     console.log(threeLargestNum)
+    //     let max=line[0]
+    //     for(let i=1;i<line.length;i++){
+    //         if(line[i]>max){
+    //             max=line[i];
+    //         }
+    //     }
+    //     console.log(max)
+    //    line.pop(max)
+    //    let line1=(line)
+    //    for(let i=1;i<line1.length;i++){
+    //         if(line1[i]>max){
+    //             max=line1[i];
+    //         }
+    //     }
+    //     console.log(max)
+
+    //Question no. 7:
+    // let arr=[77,44,33,99,44];
+    // // ... this spread operator keeps the array in their own order and makes new array(cannt change array)
+    // let arr2 = [...arr].sort(); 
+    // let i;
+    // let x=arr[0];
+    // let y=arr2[0];
+    //     if(x===y){
+    //         console.log("Yes these are equal.")
+    //     }
+    //     else{
+    //         console.log("These are not equal")
+    //     }
+
+    //Question no. 8:
+    // let ary = ['a', 'b', 'c', 'd'];
+    //  let indexes = [3, 1, 0, 2];
+    // let reorderedArray = indexes.map(index => ary[index]);
+    // console.log(reorderedArray);
+     </script>
+</body>
+</html>

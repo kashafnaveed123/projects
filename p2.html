@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+</head>
+<body>
+<h1>Today is <span id="time"></span></h1>
+
+
+    <script>
+
+        // let array=[11,22,33,44,55,66,77]
+        // array.pop()
+        // console.log(array);
+
+        // let array=[11,22,33,44,55,66,77]
+        // array.push(100)
+        // console.log(array);
+       
+        // let array=[11,22,33,44,55,66,77]
+        // array.shift()
+        // console.log(array);
+
+        // let array=[11,22,33,44,55,66,77]
+        // array.unshift(100)
+        // console.log(array);
+
+
+        // let array=[11,22,33,44,55,66,77]
+        // array.reverse()
+        // console.log(array);
+
+        // let array=[11,22,33,44,55,66,77]
+        // console.log(array.toString());
+
+        // let array=[11,22,33,44];
+        // let array1=[55,66,77,88,99]
+        // console.log(array.join(array1));
+
+        // let array=[11,22,33,44,55,66,77]
+        // array[2]=100;
+        // console.log(array);
+
+        // let dt=new  Date();
+        // console.log(dt);
+        // let  array=[11,22,33,44,55,66];
+        // let array2=array.map((array)=> array*3)
+        //   console.log(array2);
+      
+        //for reference date
+        // let referenceDate=new Date(0)
+        // console.log(referenceDate)
+
+         //for current date
+        // let referencedate=new Date()
+        // console.log(referencedate)
+
+        // Date(year,moth,date,hours,min,sec,ms)
+        //  let yr=new Date(2025,5,20,2,25,50,100)
+        //  console.log(yr)
+
+        //Current year
+        // let year= new Date().getFullYear();
+        // console.log(year);
+
+        //current month
+        //  let month= new Date().getMonth();
+        // console.log(month);
+
+        // current date 
+        // let date=new Date().getDate()
+        // console.log(date)
+
+        function clock(){
+          time=new Date();
+          console.log(time);
+         document.getElementById('time').innerHTML= time;
+
+        }
+        setInterval(clock, 1000);
+        clock();
+
+        
+        
+
+        </script>
+</body>
+</html>

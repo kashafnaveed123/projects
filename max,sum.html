@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for maximun number 
+    const numbers = [3, 7, 2, 9, 5];
+let max = numbers[0]; // Assume the first element is the maximum initially
+
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i]; // Update the maximum if a larger number is found
+    }
+}
+console.log("The maximum number in the array is:", max);
+
+// for sum 
+const digits = [1, 2, 3, 4, 5, 6];
+let sum = 0;
+
+for (let i = 0; i < digits.length; i++) {
+    if (digits[i] % 2 === 0) {
+        sum +=digits[i]; // Add even digits to the sum
+    }
+}
+
+console.log("The sum of even numbers in the array is:", sum);
+
+</script>
+</body>
+</html>

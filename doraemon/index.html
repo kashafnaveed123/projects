@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DORAEMON</title>
+    <style>
+        .line {
+            width: 400px;
+            position: absolute;
+            top: 16.7rem;
+            left: 11rem;
+            height: 1px;
+            background-color: black;
+        }
+        .circle {
+            position: absolute;
+            top: -5px;
+            left: 0rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: yellow;
+        }
+        .circle1 {
+            transform: translateX(130px);
+            transition-duration: 0.5s;
+        }
+        .circle2 {
+            transform: translateX(260px);
+            transition-duration: 0.5s;
+        }
+        img {
+            width: 15%;
+            margin: 3rem 17rem;
+        }
+        .img1 {
+            width: 25%;
+            z-index: 1;
+            border: 2px solid aqua;
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img" id="imgContainer">
+            <img src="./Doraemon.png" id="currentImage" alt="Doraemon">
+        </div>
+        <div class="line">
+            <div class="circle" onclick="handleClick()"></div>
+        </div>
+    </div>
+    <script>
+        let circle = document.getElementsByClassName('circle')[0];
+
+        function handleClick() {
+            movecircle();
+            addimg();
+        }
+
+        function movecircle() {
+            let i=1;
+        if(i===1){
+         circle.classList.add('circle1');
+         i++;
+         
+         console.log(i);
+        
+        }
+    }
+        function addimg() {
+            let newimg = document.createElement('img');
+            newimg.src = './ND.png';
+            newimg.style.width = '20%';
+            newimg.alt = "New Image";
+            newimg.id = 'NDimage';
+
+            let imgContainer = document.getElementById('imgContainer');
+            let current = document.getElementById('currentImage');
+       
+            imgContainer.appendChild(newimg);
+            imgContainer.removeChild(currentImage);
+        }       
+        if(i==2){
+            circle.classList.add('circle2');
+            i++;
+         }
+       document.innerhtml((( bgyyyjyudfqvewkjiesbkg))) 
+    </script>
+</body>
+</html>

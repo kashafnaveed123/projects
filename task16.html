@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task no. 16</title>
+</head>
+<body>
+    <script>
+        // *-------------Problem no. 1--------------------
+        let array1=[1,3,5,7]
+        let array2=[2,4,6,8]
+        merge= array1.concat(array2);
+        console.log(merge.sort());
+        
+        // *-------------Problem no. 2 --------------------
+        let num1=[1,2,2,3,4,4,5];
+        unique=num1.filter((value,index,array) => num1.indexOf(value)===index);
+        console.log(unique) 
+
+        // *-------------Problem no. 3 --------------------
+       let repeat=[1,2,2,3,4,2,5,2];
+       valProm=prompt('write an integer to count occurance');
+       let number=0;
+       let valNumber = parseInt(valProm);
+       for(let i=0;i<repeat.length;i++){
+        if(valNumber===repeat[i]){
+            number++;
+        }
+    }
+    console.log(`The occurance of ${valNumber} is ${number}.`)
+    </script>
+</body>
+</html>

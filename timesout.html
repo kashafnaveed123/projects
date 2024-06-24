@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut/clearTimeOut</title>
+</head>
+<body>
+    <div class="container">This is a container</div>
+    Time now is <span id="timer"></span>
+    <script>
+      function time(name, text) {
+    console.log("Hello Good Morning", name, text);
+}
+
+// Set a timeout to call the `time` function after 3000 milliseconds (3 seconds)
+const timing = setTimeout(time, 3000, 'kashaf', 'Have a nice day');
+console.log(timing);
+const timing1= clearTimeout(time, 5000, 'kashaf', 'Have a nice day');
+clearTimeout(timing1);
+      
+      
+      
+      //setTimeOut allows to run a program just once
+        //clearTimeOut allows to run a program repeatedly
+        // function time(name, text) {
+        //     console.log("Hello Good Morning", name, text)
+        // }
+        // // setTimeout( time , 3000 ,'kashaf' , 'Have a nice day');
+        // // if we want to cleartimeout
+        // // timing = setTimeout(time, 3000, 'kashaf', 'Have a nice day');
+        // timing = setTimeout(time, 3000, 'kashaf', 'Have a nice day');
+        // console.log(timing)
+        // clearTimeout(timing)
+        // if we want to stop popup menu which is showing after an interval 
+        // stopmenu = setTimeout(time, 3000, 'kashaf', 'Have a nice day');
+        // console.log(stopmenu)
+        // clearInterval(stopmenu)
+
+        //To display Time 
+        // function clock() {
+        //     time = new Date();
+        //     console.log(time);
+        //     document.getElementById('timer').innerHTML = time;
+        // }
+        // setInterval(clock, 1000);
+        // clock();
+    </script>
+</body>
+
+</html>

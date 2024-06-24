@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classs no. 34</title>
+</head>
+<body>
+    <button id="btn" onmouseover="over()" onmouseout="out()">Hover me </button>
+
+    <script>
+    function over(){
+        document.getElementById('btn').style.background='purple';
+        document.getElementById('btn').style.color='white';
+        document.getElementById('btn').style.border='none';
+        document.getElementById('btn').style.borderRadius='5px';
+        document.getElementById('btn').innerText='I am mouse over';
+    }
+    function out(){
+        document.getElementById('btn').style.background='pink';
+        document.getElementById('btn').style.color='white';
+        document.getElementById('btn').style.border='none';
+        document.getElementById('btn').style.borderRadius='3px';
+        document.getElementById('btn').innerText='I am mouse out';
+    }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<div id="div1">
+<p>I am first </p>
+<p>I am second </p>
+</div>
+<script>
+    const para=document.createElement("p");
+    const node=document.createTextNode("this is new para");
+    para.appendChild(node);
+    let div=document.getElementById('div1');
+    div.appendChild(para)
+</script>
+</body>
+</html>

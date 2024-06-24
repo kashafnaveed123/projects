@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- First num -->
+    <br><br> <label for="">Number1</label>
+    <input type="number" id="num1" name="num1"> <br> <br>
+    <!-- Second num -->
+    <label for="">Number2</label>
+    <input type="number" id="num2" name="num2"> <br> <br>
+      <!-- Operations -->
+       <label for="">Select Operator</label> 
+      <select name="" id="operator">
+        <option value="+" id="add" name="add">+</option>
+        <option value="-" id="sub" name="sub">-</option>
+        <option value="*" id="mul" name="mul">*</option>
+     </select><br> <br>
+    <!-- Result -->
+    <label for="">Result</label>
+    <input type="number" id="output" readonly> <br><br>
+     <!-- convert -->
+      <label for="">Click here to calculate</label>
+    <button id="btn" onclick="button()">Calculate</button>
+</body>
+    <script>
+         function button(){
+    let num1=document.getElementById('num1').value;
+    let num2=document.getElementById('num2').value;
+    let operator=document.getElementById('operator').value;
+    let btn=document.getElementById('btn').value;
+    let result=document.getElementById('output').value
+     const number1=parseInt(num1);
+     const number2=parseInt(num2);
+        if(operator==="+"){
+            result=number1+number2;
+            console.log(result)
+        }
+        else if(operator==="-"){
+            result=number1-number2
+            console.log(result)
+        }
+        else if(operator==="*"){
+            result=number1 * number2;
+            console.log(result)
+        }
+        result=output.value
+        //  document.getElementById('result').value=result;
+                }
+            </script>
+</html>

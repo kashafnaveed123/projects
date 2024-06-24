@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin-top: 3rem;
+        }
+
+        input {
+            width: 130px;
+            height: 20px;
+        }
+
+        .fisrt {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .first button {
+            width: 30px;
+            height: 20px;
+        }
+
+        .calculator {
+            width: 23%;
+            background-color: black;
+            text-align: center;
+            margin: auto;
+            padding: 14px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .num {
+            width: 400px;
+            margin: 10px auto;
+            display: block;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+
+        .number {
+            /* border: 1px solid #000; */
+            padding: 12px;
+            margin: 100px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 13px;
+            background: linear-gradient(315deg, #cacaca, #f0f0f0);
+            box-shadow: 0px 0px 3px #dedede,
+                1px 1px 5px #e2e2e2;
+            margin: 2rem;
+
+        }
+
+        .number:hover {
+            background: linear-gradient(315deg, #ffffff, #f3f3f3);
+        }
+
+        .chr:hover {
+            background: linear-gradient(315deg, #ffffff, #f3f3f3);
+        }
+
+        .chr {
+            background-color: rgb(146, 146, 146);
+            padding: 12px;
+            margin: 100px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 13px;
+            background: linear-gradient(315deg, #aaaaaa, #dedede);
+            box-shadow: 0px 0px 3px #dedede,
+                0px 0px 3px #e2e2e2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="first">
+            <input type="text" id="num" name="num" width="400px"> <button onclick="AC()">AC</button>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td onclick="number(9)" class="number">9</td>
+                    <td onclick="number(8)" class="number">8</td>
+                    <td onclick="number(7)" class="number">7</td>
+                    <td class="chr" onclick="del()">Del</td>
+                </tr>
+                <tr>
+                    <td onclick="number(6)" class="number">6</td>
+                    <td onclick="number(5)" class="number">5</td>
+                    <td onclick="number(4)" class="number">4</td>
+                    <td class="chr" class="operator" onclick="applyOperator('+')">+</td>
+                </tr>
+                <tr>
+                    <td onclick="number(3)" class="number">3</td>
+                    <td onclick="number(2)" class="number">2</td>
+                    <td onclick="number(1)" class="number">1</td>
+                    <td class="chr" class="operator" onclick="applyOperator('-')">-</td>
+                </tr>
+                <tr>
+                    <td class="number" onclick="number(0)">0</td>
+                    <td class="chr" class="operator" onclick="applyOperator('%')">%</td>
+                    <td class="chr" class="result" onclick="getResult()">=</td>
+                    <td class="chr" class="operator" onclick="applyOperator('*')">*</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function number(num) {
+            let number = document.getElementById('num')
+            number.value = number.value + num;
+            console.log(number.value)
+        }
+        function applyOperator(num) {
+            let operation = document.getElementById('num');
+            operation.value = operation.value + num;
+            console.log(operation.value)
+        }
+        function getResult() {
+            let inputField = document.getElementById('num');
+            let expression = inputField.value;
+            try {
+                let result = eval(expression);
+                inputField.value = result;
+            } catch (e) {
+                inputField.value = 'Error';
+            }
+        }
+        function del() {
+            let inputField = document.getElementById('num');
+            inputField.value = inputField.value.slice(0, -1);
+        }
+        function AC() {
+            let inputField = document.getElementById('num');
+            inputField.value = " "
+        }
+    </script>
+</body>
+
+</html>

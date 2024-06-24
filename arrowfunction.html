@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        //before we use 
+        // function greet() {
+            //     console.log('Good Morning')
+            // } 
+            //now
+            greet=()=>console.log('Good Morning');
+            greet();
+            //also setTTimeout
+            setTimeout(() => {
+                console.log('hy,myself kashaf')
+            }, 3000);
+            //we can also do sum
+            // let sum=(a,b)=>{
+            //     return a+b;
+            // }
+            //we can also write
+            let sum=(a,b)=> a+b;
+            //then we have to write for example sum(33,21) on console to do sum
+            let half=a=>a/2;
+            //then we have to write for example half(a) on console to do half of a
+            // we can ignore brakets when we are dealing with only one variable but not in two variables
+            let half2=(a,b)=>(a+b)/2;
+            //then we have to write for example half(a,b) on console to perform a function
+            let obj1={
+                greeting:"Good morning",
+                names:["kashaf.","amna.","mamona."],
+                speak(){
+                    this.names.forEach((student)=> {
+                        console.log("Hello"+" "+ this.greeting +" "+ student)
+                    });
+                }
+            }
+            obj1.speak();
+            
+
+
+    </script>
+</body>
+</html>

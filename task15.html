@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 15</title>
+</head>
+<body>
+    <script>
+        /*------ problem no. 1:program to calculate the sum of two numbers----------*/
+        let a=20;
+        b=30;
+      let sum=a+b;
+      console.log(sum);
+
+    // -----  By using a function ----
+     function sum(x,y){
+        return x+y;
+    //agar yahan tak kre gay console pe likh k ans show karwana hoga 
+    }
+    let returnVal=(20,30);
+    console.log(returnVal);
+    //is se value console pe show hogi
+
+    //----by using Arrow function----
+    let sum=(a,b)=>a+b;
+    let result=sum(20,30)
+    console.log(result);
+
+        /*------ problem no. 2:program to find the max num in an array----------*/
+       let array=[11,66,88,99,33,55];
+       let max=array[0] ;
+       for(let i=0;i<array.length;i++){
+        if(array[i]>max){
+            max=array[i]
+        }
+    }
+    console.log(max);
+    // By using math object
+    let array1=[11,66,88,99,33,55];
+    function maxNum(){
+    return Math.max(...array1);
+    }
+    console.log(maxNum());
+
+    /*------ problem no. 3:to check if the function is palindrome or not----------*/
+    let strings = ["1111", "2222", "3333"];
+
+function isPalindrome(str) {
+    let newStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    return newStr === newStr.split('').reverse().join('');
+}
+
+function checkPalindrome(string) {
+    if (isPalindrome(string)) {
+        console.log(string + " is a palindrome.");
+    } else {
+
+        
+        console.log(string + " is not a palindrome.");
+    }
+}
+strings.forEach(checkPalindrome);
+
+    /*------ problem no. 4:to reverse a given string----------*/
+    let data=[0,1,2,3,4,5,6,7,8,9];
+    newData=data.reverse();
+    console.log(data);
+
+    /*------ problem no. 5: that gives even digits----------*/
+    even=[0,1,2,3,4,5,6,7,8,9];
+    for(let i=0;i<even.length;i++){
+     if(i%2===0){
+      console.log(i);    
+     }
+    }
+
+    /*------ problem no. 6: to find a factorial----------*/
+    let z=prompt("write a positive number here"); 
+    function factorial(z){
+        if(z===0||z===1){
+            return 1;
+        }
+        else{
+            return z*factorial(z-1);
+
+        }
+     }
+     console.log(`the factorial of ${z} is ${factorial(z)}`)
+
+    /*------ problem no. 7: to check if the number is prime----------*/
+    let n=prompt("write any positive number here.")
+    function isPrime(n){
+        if(n<2){
+            console.log(`${n} is a prime number`)
+        } 
+        for (let i=2;i<n;i++){
+            if(n%2===0){
+                console.log(`${n} is not a prime number`);
+            }
+            else{
+                console.log(`${n} is a prime number`)
+            }
+        }
+    }
+    console.log(isPrime(n));
+
+
+</script>
+</body>
+</html>

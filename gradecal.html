@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calcultor</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;        
+    }
+    .container{
+        margin-left: 20rem ;
+        margin-top: 6rem;
+    }
+    h1{
+        margin-bottom: 5px;
+    }
+    input{
+        margin: 2px;
+        width: 44%;
+        height: .8rem;
+        font-size: 8px;
+    }
+    button{
+        margin: 3px;
+    }
+</style>
+<body>
+    <form >
+        <div class="container">
+        <h1>Grade Calculator</h1>
+        <input type="number" placeholder="Enter grade for subject 1" id="grade1"> <br>
+        <input type="number" placeholder="Enter grade for subject 2" id="grade2"><br>
+        <input type="number" placeholder="Enter grade for subject 3" id="grade3"><br>
+        <input type="number" placeholder="Enter grade for subject 4" id="grade4"><br>
+        <button id="btn">Calculate Average</button>
+        <p id="output"></p>
+    </div>
+    </form>
+    <script>
+        let output1=document.getElementById('grade1');
+        let output2=document.getElementById('grade2');
+        let output3=document.getElementById('grade3');
+        let output4=document.getElementById('grade4');
+        let outputbtn=document.getElementById('btn')
+        outputbtn.addEventListener('click', (event)=>{
+            event.preventDefault();
+            let grade1=parseFloat(output1.value)
+            let grade2=parseFloat(output2.value)
+            let grade3=parseFloat(output3.value)
+            let grade4=parseFloat(output4.value)
+            let average= (grade1 + grade2 + grade3+ grade4)/4
+            if(average>50){
+                output.textContent=`Congratulations! Hasnain (BC210402771) You passed with an average of garde ${average}`
+            }
+            else if(average<50){
+                output.textContent=`Unfortunetly! Hasnain (BC210402771) You failed with an average of grade ${average}`
+            }
+        })
+    </script>
+</body>
+</html>

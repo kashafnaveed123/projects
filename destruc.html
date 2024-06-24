@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De structuring</title>
+</head>
+<body>
+    <script>
+        //when we use array, we can use only keys 
+        // let array=['amna', 'kashaf',  'saba']
+        // const [first, ...second]=array
+        // console.log(first);
+        // console.log(second);
+
+        //when we use objects we have both keys and values.
+        let array={
+            name:'kashaf',
+            age:19,
+            education:'bscs',
+        } 
+        array.name='amna'
+        const {name}=array
+        console.log(name);
+    </script>
+</body>
+</html>

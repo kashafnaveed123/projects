@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Objects</title>
+</head>
+<body>
+    <script>
+        let k= Math;
+        console.log(k)
+        //Printing constants from Math objects
+        console.log("This is Math.E"  +" "+ Math.E)
+        console.log("This is Math.LN2"  +" "+ Math.LN2)
+        console.log("This is Math.LN10"  +" "+ Math.LN10)
+        console.log("This is Math.LOG2E"  +" "+ Math.LOG2E)
+        console.log("This is Math.LOG10E"  +" "+ Math.LOG10E)
+        console.log("This is Math.PI"  +" "+ Math.PI)
+        console.log("This is Math.SQRT1_2" +" " + Math.SQRT1_2)
+        console.log("This is Math.SQRT2"  +" "+ Math.SQRT2)
+//functions
+let a=34.555;
+b=44.8383494
+console.log("The value of a and b is " + a , b)
+//Rounded Function
+console.log("The rounded value of a and b is " + Math.round(a), Math.round(b));
+//Power function
+console.log("2 raise to the power of 3 is "+ Math.pow(2,3));
+//square function
+console.log("square root of 33 is " + Math.sqrt(33))
+//ceil 
+console.log("The rounded up value of 5.777 is " + Math.ceil(5.777))
+console.log("The rounded up value of 5.444 is " + Math.ceil(5.444))
+//Floor
+console.log("The rounded down value of 5.777 is " + Math.floor(5.777))
+console.log("The rounded down value of 5.444 is " + Math.floor(5.444))
+//Absolute function (Gives always positive number)
+console.log("Absolute value of 5.666 is " + Math.abs(5.66))
+console.log("Absolute value of -5.666 is " + Math.abs(-5.66))
+//Trigonometric function
+console.log("The value of sin(PI) is " + Math.sin(Math.PI))
+console.log("The value of sin(PI/2) is " + Math.sin(Math.PI/2))
+console.log("The value of sin(40rad) is " + Math.sin(40))
+//for min value
+console.log("The min value of 3,8,5 is " + Math.min(3,8,5))
+//for max value
+console.log("The max value of 3,8,5 is " + Math.max(3,8,5))
+//for random number 
+//formula (a,b)=a +(b-a)*Math.random()
+let x=50;
+y=90;
+z=Math.random();
+let z50_90=x+(y-x)*Math.random();
+console.log("The random number is " , z);
+console.log("The random number is " , z50_90 );
+    </script>
+</body>
+</html>

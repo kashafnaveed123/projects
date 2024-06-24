@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Listening</title>
+</head>
+<style>
+    h1{
+        width: 10%;
+        margin: auto;
+    }
+    a{
+        cursor: pointer;
+        color: blue;
+    }
+</style>
+<body>
+    <h1>About me </h1>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero, ducimus
+         a ex deleniti, consectetur veritatis odit temporibus
+         voluptatibus aperiam optio inventore nemo harum explicabo ipsam cupiditate officiis molestias dignissimos 
+         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, neque magnam. Sed fuga laboriosam culpa eaque debitis 
+         facere quae accusamus consectetur quam ea! Illo debitis voluptatem minima, reprehenderit explicabo 
+         cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nobis delectus ipsum, nisi sapiente illum, similique nemo id blanditiis eaque? Dolorem id, tenetur reiciendis eligendi aliquam optio ipsa architecto! Voluptatibus totam distinctio consequatur iusto, laboriosam autem, quis nisi aut, assumenda dicta consequuntur explicabo id soluta mollitia recusandae tempora itaque esse vero! Facilis ex laborum, recusandae culpa sint magnam sed? Aut doloremque pariatur dicta, accusantium molestias veniam error, at consequuntur eaque reprehenderit optio vitae voluptatibus repellendus sed accusamus officiis quibusdam explicabo deserunt! Voluptates facilis quaerat, fugit itaque corrupti delectus doloremque harum consequatur aliquid sed consectetur voluptatem mollitia ipsa commodi velit iure soluta. Numquam aperiam sapiente error repellendus quo iure earum commodi, obcaecati ab dolores non quod recusandae mollitia doloribus molestias fugiat dignissimos quibusdam, nihil doloremque amet porro hic nobis quidem ipsam! Ratione reiciendis tempore, blanditiis, voluptatum illo debitis assumenda totam commodi at temporibus autem, rem quo maiores sequi iste quasi ipsam. Ratione nisi, ad non nobis sunt dolorem optio, rem repudiandae aut explicabo dicta! Iste officiis placeat reprehenderit obcaecati possimus voluptas molestiae, modi, repellat, corrupti ab accusantium velit voluptatibus voluptatum suscipit. Facilis impedit id, quibusdam
+          voluptates ducimus saepe, quis corrupti omnis delectus dicta expedita culpa veritatis, quidem quos 
+          </span>
+          <a href="#" id="btn"  onclick="toggleHide()">Read more...</a>
+          <span id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero, ducimus
+            a ex deleniti, consectetur veritatis odit temporibus
+            voluptatibus aperiam optio inventore nemo harum explicabo ipsam cupiditate officiis molestias dignissimos 
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, neque magnam. Sed fuga laboriosam culpa eaque debitis 
+            facere quae accusamus consectetur quam ea! Illo debitis voluptatem minima, reprehenderit explicabo 
+            cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis nobis delectus ipsum, nisi sapiente illum, similique nemo id blanditiis eaque? Dolorem id, tenetur reiciendis eligendi aliquam optio ipsa architecto! Voluptatibus totam distinctio consequatur iusto, laboriosam autem, quis nisi aut, assumenda dicta consequuntur explicabo id soluta mollitia recusandae tempora itaque esse vero! Facilis ex laborum, recusandae culpa sint magnam sed? Aut doloremque pariatur dicta, accusantium molestias veniam error, at consequuntur eaque reprehenderit optio vitae voluptatibus repellendus sed accusamus officiis quibusdam explicabo deserunt! Voluptates facilis quaerat, fugit itaque corrupti delectus doloremque harum consequatur aliquid sed consectetur voluptatem mollitia ipsa commodi velit iure soluta. Numquam aperiam sapiente error repellendus quo iure earum commodi, obcaecati ab dolores non quod recusandae mollitia doloribus molestias fugiat dignissimos quibusdam, nihil doloremque amet porro hic nobis quidem ipsam! Ratione reiciendis tempore, blanditiis, voluptatum illo debitis assumenda totam commodi at temporibus autem, rem quo maiores sequi iste quasi ipsam. Ratione nisi, ad non nobis sunt dolorem optio, rem repudiandae aut explicabo dicta! Iste officiis placeat reprehenderit obcaecati possimus voluptas molestiae, modi, repellat, corrupti ab accusantium velit voluptatibus voluptatum suscipit. Facilis impedit id, quibusdam
+             voluptates ducimus saepe, quis corrupti omnis delectus dicta expedita culpa veritatis, quidem quos 
+             laudantium quo?.</span>
+    <script>
+        function toggleHide() {
+        let btn=document.getElementById('btn');
+        let para=document.getElementById('para');
+        if (para.style.display !='none') {
+            para.style.display='none';
+        } 
+        else {
+            para.style.display='block';
+        }
+        
+    }
+    para.addEventListener('mouseover',function run(){
+        alert('Mouse inside')
+    })
+    para.addEventListener('mouseout',function run(){
+        alert('Mouse outside')
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <script>
+        var str = "This is a string."
+        console.log(str)
+
+        // To find position/index / also for first occurance of a sub string 
+        var position = str.indexOf('i');
+        console.log(position)
+
+        // Last Occurance of sub string
+        var last = str.lastIndexOf('i')
+        console.log(last)
+
+        //For slicing from substring
+        var slicing = str.slice(1, 7)
+        console.log(slicing)
+        //we also write
+        var slicing=str.substring(1,7)
+        console.log(slicing)
+        //Slice can also give you negative number but substring can't
+        
+        //for replacement
+        var replaced=str.replace('string' , 'kashaf')
+        console.log(replaced)
+
+        //  for uppercase
+        var upper=str.toUpperCase()
+        console.log(upper)
+
+        //for lowercase
+        var lower=str.toLowerCase()
+        console.log(lower)
+
+        //for concatination or joining of two string
+        var con=str.concat('I have many functions.')
+        console.log(con)
+
+        //trim whitespacing
+        var white='      This is  a    string        '
+        console.log(white.trim())
+
+        // for find character at an index
+        var chr=str.charAt(2)
+        console.log(chr)
+
+        //to show the code of a character
+        var chrcode=str.charCodeAt(2)
+        console.log(chrcode)
+
+
+
+    </script>
+</body>
+
+</html>

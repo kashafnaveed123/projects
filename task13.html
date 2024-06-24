@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task no. 23</title>
+</head>
+<body>
+    <script>
+        /*---------Problem no. 1 :program that takes user from user and calculates the length--------*/
+        let userinput=prompt("Write required number here" );
+        console.log(userinput);
+        let inputlength=userinput.length;
+        console.log(inputlength);
+
+
+        /*--------------Problem no.2: Create a program that prompts the user for a string and an index.
+        Then use the charAt() method to display character at that index-----------------------*/
+        let input=prompt("Enter a string");
+        console.log(input);
+        let indexData=parseInt(prompt("Enter index value"));
+        if(indexData<= 0 ){
+            return false 
+        }
+        if (indexData>=input.length && indexData<input.length ){
+            let character=input.charAt(indexData);
+            console.log(character)
+        }
+        else{
+            console.log("Please enter valid index")
+        }
+
+        /*-----------Problem no. 3: Takes user a sentence and take substring btw---------- */
+        let sub=prompt("Write a sentence here");
+        let start=prompt("Write a start position for substring");
+        let end=prompt("Write a end position for substring");
+        let substr=sub.substring(start,end);
+        console.log(substr);
+        
+        /*-----------Problem no. 4: Takes user a sentence and split the words---------- */
+        let sen=prompt("Enter sentence here ");
+        //split sentence
+        let words=sen.split(" ");
+        //words length
+        let wordscount=words.length;
+        console.log(`The sentence "${sen} has ${wordscount} words`);
+
+        /*--------------Probelm no.5: Create a program that takes a sentence from a user and allows a 
+         user to search and replace it with another word--------------------------*/
+         let sentence=prompt("Enter your sentence here");
+         let searchWord=prompt("Enter the word you want to search");
+         let replaceWord=prompt("Enter the word you want to replace");
+         let modifiedSentence=sentence.replace(new RegExp(searchWord,'gi'),replaceWord);
+         console.log(`Original Sentence is ${sentence}`);
+         console.log(`Modified Sentence is ${modifiedSentence}`);
+
+        /*----------------Problem no. 6:Program that finds the index of character----------------*/
+        let str= prompt("Write string here");
+        let chr=prompt("Write the character here")
+        let ind=str.indexOf(chr);
+        console.log(`The first occurance of ${chr} is ${ind}`);
+
+
+        /*----------------Problem no. 7:Program that reverses a string----------------*/
+        let string=prompt("Write a string");
+        let sp=string.split("");
+        let rev= (sp.reverse());
+        console.log(rev.join(""));
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Classes</title>
+</head>
+
+<body>
+    <script>
+        /*-------Object here------*/
+        // const student={
+        //     fullName:"Kashaf naveed",
+        //     age:19,
+        //     qualification:"CS"
+        // }
+        // console.log(student);
+        // console.log(student.fullName)
+        // console.log(student.age)
+        // console.log(student.qualification)
+
+        // const student = {
+        //     fullName: "Kashaf naveed",
+        //     age: 19,
+        //     qualification: "CS",
+        //     marks: 44,
+        //     PrintMarks: function () {
+        //         console.log("marks are", this.marks)
+        //     }
+        // }
+        // console.log(student);
+
+        //Formats of objects
+        //    const employee={
+        //     calTax1(){
+        //         console.log("calTax1");
+        //     },
+        //     caltax2:function(){
+        //         console.log("caltax2")
+        //     }
+        // }
+    
+
+        // class myClass{
+        // constructor(name,standard,grades){
+        //     this.name=name,
+        //     this.standard=standard,
+        //     this.grades=grades
+        //     }
+        //     }
+        //     let details=new myClass( "kashaf",12,"A");
+        //     console.log(details);
+        // console.log( new myClass( "kashaf",12,"A"));
+
+        // class speakfunct{
+        //     speak(){
+        //         hello="Hello world";
+        //     console.log(hello);
+        //         }
+        //         }
+        //         let newfunct=new speakfunct()
+        //         console.log(newfunct);
+
+
+        class person {
+            constructor(name,age,degree,experience){
+                this.name=name,
+                this.age=19,
+                this.degree=degree,
+                this.experience=experience
+            
+                }
+                speak(){
+                    console.log("hello")
+                }
+            }
+            let first_person=new person("kashaf", 19,"CS", "2 years")
+            /*----to change any property in an object----*/
+            // first_person.name="Eman";
+
+            /*----to add something in prototype-----*/
+            person.prototype.name="Hello I am in prototype";
+            console.log(first_person);
+            let second_person=new person("Amna",17,"CS", "none");
+            console.log(second_person);
+            // console.log(first_person.speak());
+            // console.log(second_person.speak());
+// class Person {
+//         constructor(name , age , height , color){
+//             this.name = name ,
+//             this.age = age
+//             this.height = height 
+//             this.color = color 
+//             this.weight = 50
+//         }
+//         speak(){
+//             console.log("hello my name is", this.name)
+//         }
+
+        /*-----inheritance----*/
+        class parent{
+            hello(){
+                console.log("Hello")
+            }
+        };
+        class child extends parent{};
+        let obj=new child();
+        console.log(child)
+    
+
+
+
+    </script>
+</body>
+
+</html>

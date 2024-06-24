@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        // let result= sum()=>{
+        //   result=a+b;
+        //    return result;
+        // }
+        // console.log(result(2,4))
+        function createFunction() {
+    function f(a, b) {
+        const sum = a + b;
+        return sum;
+    }
+    return f;
+}
+const f = createFunction();
+console.log(f(3, 4)); // 7
+
+let result=function add(a,b){
+  let sum = a+b;
+    return sum;
+}
+console.log(result(2,4));
+    </script>
+</body>
+</html>

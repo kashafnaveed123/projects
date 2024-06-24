@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems in JS</title>
+</head>
+
+<body>
+    <script>
+        /*------- Write a function that takes a string as input and returns the string reversed.--------*/
+        let str = "Hello";
+        let rev = str.split("").reverse().join('');
+        console.log(rev);
+
+        /*--------Create a function that counts the number of vowels (a, e, i, o, u) in a given string.------*/
+        let value = "Apple";
+        word = value.toLocaleLowerCase();
+        let vowelCount = 0;
+        for (let i = 0; i < word.length; i++) {
+            let char = word[i];
+        if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === "u") {
+            vowelCount++;
+        }
+    }
+        console.log(vowelCount);
+ /*--- Create a function that takes a sentence as input and returns the same sentence with all words converted to uppercase------*/
+// let sentence = prompt("Write a string here");
+// let upper=sentence.toUpperCase('');
+// console.log(upper);
+/*---Write a function that takes a string (a sentence) as input and returns the longest word in the sentence.-----*/
+let string="I love programming";
+let split=string.split(' ');
+let maxLength=0;
+for (let i = 0; i< split.length; i++) {
+  const  line= split[i];
+  console.log(line)
+  if (split.length>maxLength) {
+
+  }
+    }
+    </script>
+</body>
+
+</html>
