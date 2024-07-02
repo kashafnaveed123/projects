@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritence and try catch()</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(name){
+                this.specie="Homo sepiens";
+                this.name=name;
+            }
+            eat(){
+                console.log("lemme eat something.")
+            }
+        }
+        class Engineer extends person{
+            constructor(name,   branch){
+                super(name);//to invoke parent constructor
+                this.branch=branch;
+            }
+           work(){
+            //to call eat in work
+            super.eat()
+                console.log("solve problem and build something");
+            };
+        }
+        let engObj= new Engineer("Kashaf","chemical engg");
+
+        //=============practice==========
+
+        class user{
+            constructor(name,email){
+                this.name=name;
+                this.email=email;
+            }
+            viewData(){
+                console.log('Secret Data')
+            }
+        }
+        let student1=new user("kashaf","abc@gmail.com");
+        let student2=new user("Aman","def@gmail.com");
+        class admin extends user{
+            constructor(name,email,marks){
+                super(name,email);
+                this.marks=marks;
+            }
+            viewData(){
+                console.log('confidential data');
+            }
+        }
+        let admin1=new admin("admin","admin@gmail.com",100)
+
+
+
+        //=====problem 2===========
+        let a=3;
+        let  b=4;
+        console.log(a)
+        console.log(b)
+        console.log("a+b=",a+b)
+        console.log("a+b=",a+b)
+        console.log("a+b=",a+b)
+        try{
+            console.log("a+b=",a+c)
+        }
+        catch(err){
+            console.log(err)
+        }
+        console.log("a+b=",a+b)
+        console.log("a+b=",a+b)
+        console.log("a+b=",a+b)
+        console.log("a+b=",a+b)
+    </script>
+</body>
+</html>
