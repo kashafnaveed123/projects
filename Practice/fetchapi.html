@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <div id="wheather"></div>
+    <script>
+        let div = document.getElementById('wheather')
+        let URL = "http://api.openweathermap.org/data/2.5/weather?q=faisalabad&appid=2044da7417aa03fec696fde550e3065f"
+        const app = async () => {
+            let response = await fetch(URL);
+            let data = await response.json()
+            console.log(data)
+            div.innerHTML = JSON.stringify(data[0]);
+            div.innerHTML = `City: ${data.name} Feels like: ${data.main.feels_like}, Temperature: ${data.main.temp}K GRND level: ${data.main.grnd_level
+                }
+  Humidity: ${data.main.humidity}
+  Pressure: ${data.main.pressure}
+  Sea Level: ${data.main.sea_level} 
+  Max-Temp: ${data.main.temp_max} `;
+        }
+        app();
+    </script>
+</body>
+
+</html>

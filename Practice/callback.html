@@ -1,140 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CallBack| Call back hell| promises| Async await </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallBack| Call back hell| promises| Async await </title>
 </head>
+
 <body>
-    <script>
-    //   function getData(dataId,getNextData){
-    //     setTimeout(() => {
-    //         console.log("data", dataId)
-    //         if(getNextData){
-    //             getNextData() ;
-    //         }
-    //     }, 2000);
-    //   }  
-    //   //CallBackHell (Pyramid of doom)
 
-    //   console.log("Getting data 1===")
-    //   getData(1,()=>{
-    //   console.log("Getting data 2===")
-    //     getData(2 ,()=>{
-    //   console.log("Getting data 3===")
-    //   getData(3,()=>{
-    // console.log("Getting data 4===")
-    //             getData(4)
-    //         })
-    //     });
-    //   });
+  <script>
+    function getData(dataId, getNextData) {
+      setTimeout(() => {
+        console.log("data", dataId)
+        if (getNextData) {
+          getNextData();
+        }
+      }, 2000);
+    }
+    //CallBackHell (Pyramid of doom)
 
-      //Promises 
+    console.log("Getting data 1===")
+    getData(1, () => {
+      console.log("Getting data 2===")
+      getData(2, () => {
+        console.log("Getting data 3===")
+        getData(3, () => {
+          console.log("Getting data 4===")
+          getData(4)
+        })
+      });
+    });
 
-      // let promise=new Promise((resolve,reject)=>{
-        // console.log("Hello, I am promise")
-        // resolve("success");
-        // reject("error occurs")
-      // })
+    // Promises 
 
-      
-      // function getData(dataId){
-      //   return new Promise((resolve,reject)=>{
-      //     setTimeout(() => {
-      //         console.log("data", dataId);
-      //         // resolve("success");
-      //         reject("error")
-      //     }, 5000);
-      //   })
-      // }
-      
-      // let getPromise=()=>{
-      //   return new Promise((resolve,reject) =>{
-      //     console.log("Hello,I am promise")
-      //     // resolve("resolved")
-      //     reject("unresolved")
-      //   })
-      // }
-      // let promise=getPromise();
-      // promise.then((res)=>{
-      //   console.log("Successfully occured",res)
-      // })
-      // promise.catch((err)=>{
-      //   console.log("Error occured",err)
-      // })
-
-      //Promises chain
-      // let getPromise1=()=>{
-      //   return new Promise((resolve,reject) =>{
-      //     setTimeout(() => {
-      //       console.log("success")
-      //       resolve("data 1")
-      //     }, 4000);
-      //   })
-      // }
-      // let getPromise2=()=>{
-      //   return new Promise((resolve,reject) =>{
-      //     setTimeout(() => { 
-      //       console.log("success")
-      //     resolve("data 2")
-      //     }, 4000);
-      //   })
-      // }
-      // let promise1=getPromise1();
-      // console.log("Fetching data 1=====")
-      // promise1.then((res)=>{
-      //   console.log(res)
-      //   console.log("Fetching data 2=====")
-      // let promise2=getPromise2();
-      // promise2.then((res)=>{
-      //   console.log(res)
-      // })
-      // })
-      
-      // we can also write this 
-      // console.log("Fetching data 1=====")
-      //  getPromise1().then((res)=>{
-      //   console.log("Fetching data 2=====")
-      //  getPromise2().then((res)=>{
-      // })
-      // })
-
-      //   getData=(dataId)=>{
-      //     return new Promise((resolve,reject)=>{
-      //       setTimeout(() => {
-      //         console.log(dataId);
-      //     resolve("success")
-      //     }, 2000);
-      //     })
-      //  }
-      //  getData(1)
-      //  .then((res)=>{
-      //   return getData(2)
-      //  })
-      //  .then((res)=>{
-      //   return getData(3)
-      //  })
-      //  .then((res)=>{
-      //   return getData(4)
-      //  })
-      //  .then((res)=>{
-      //   console.log(res)
-      //  })
-
-      //Async
-      // await==> await pauses the execution of its surrounding aysnc function until the promise is setteled;
-     async function hello(){
-        console.log("Hello")
-      }
+    let promisee1 = new Promise((resolve, reject) => {
+      console.log("Hello, I am promise")
+      resolve("success");
+      reject("error occurs")
+    })
 
 
-      
-    </script>
+    function getData(dataId) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("data", dataId);
+          // resolve("success");
+          reject("error")
+        }, 5000);
+      })
+    }
+
+    let getPromise = () => {
+      return new Promise((resolve, reject) => {
+        console.log("Hello,I am promise")
+        // resolve("resolved")
+        reject("unresolved")
+      })
+    }
+    let promise = getPromise();
+    promise.then((res) => {
+      console.log("Successfully occured", res)
+    })
+    promise.catch((err) => {
+      console.log("Error occured", err)
+    })
+
+    // Promises chain
+    let getPromise1 = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("success")
+          resolve("data 1")
+        }, 4000);
+      })
+    }
+    let getPromise2 = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("success")
+          resolve("data 2")
+        }, 4000);
+      })
+    }
+    let promise1 = getPromise1();
+    console.log("Fetching data 1=====")
+    promise1.then((res) => {
+      console.log(res)
+      console.log("Fetching data 2=====")
+      let promise2 = getPromise2();
+      promise2.then((res) => {
+        console.log(res)
+      })
+    })
+
+    // we can also write this 
+    console.log("Fetching data 1=====")
+    getPromise1().then((res) => {
+      console.log("Fetching data 2=====")
+      getPromise2().then((res) => {
+      })
+    })
+
+    getData = (dataId) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log(dataId);
+          resolve("success")
+        }, 2000);
+      })
+    }
+    getData(1)
+      .then((res) => {
+        return getData(2)
+      })
+      .then((res) => {
+        return getData(3)
+      })
+      .then((res) => {
+        return getData(4)
+      })
+      .then((res) => {
+        console.log(res)
+      })
+
+    //Async
+    async function hello() {
+      console.log("Hello")
+    }
+    // await==> await pauses the execution of its surrounding aysnc function until the promise is setteled;
+    function gettingData(dataId) {
+      return new Promise((resolve, success) => {
+        setTimeout(() => {
+          console.log("data", dataId)
+          resolve("success")
+        }, 2000);
+      })
+    }
+    async function getAllData() {
+      console.log("getting data 1");
+      await gettingData(1);
+      console.log("getting data 2");
+      await gettingData(2)
+      console.log("getting data 3");
+      await gettingData(3)
+    }
+
+    //Immediately invoked Function Expression( IIFE)
+    // IIFE is a function that is called nimmeditely as soon as possiblke it is defined
+
+    (async function () {
+      console.log("getting data 1");
+      await gettingData(1);
+      console.log("getting data 2");
+      await gettingData(2)
+      console.log("getting data 3");
+      await gettingData(3)
+    })();
+  </script>
 </body>
+
 </html>
-
-
-
-
-
-
